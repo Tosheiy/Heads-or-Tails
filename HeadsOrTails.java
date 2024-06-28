@@ -27,6 +27,8 @@ class HeadsOrTails {
         long cnt_Tails = Arrays.stream(list).filter(x -> x.equals("Tails")).count();
         System.out.println("Heads: " + cnt_Heads + ", Tails: " + cnt_Tails);
 
+        PrintJudge(cnt_Heads, cnt_Tails);
+
     }
 
     private String PrintHeadsOrTails() {
@@ -35,6 +37,14 @@ class HeadsOrTails {
             return "Heads";
         } else {
             return "Tails";
+        }
+    }
+
+    private void PrintJudge(long cnt_H, long cnt_T) {
+        if (cnt_H > cnt_T) {
+            System.out.println("You won");
+        } else {
+            System.out.println("You lost");
         }
     }
 }
