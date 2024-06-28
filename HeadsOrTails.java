@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 import java.util.Arrays; // Arraysクラスのインポート
 
 class HeadsOrTails {
@@ -8,6 +9,8 @@ class HeadsOrTails {
 
     void run() {
         String[] list = new String[3];
+
+        Greeding();
 
         System.out.println("Tossing a coin...");
 
@@ -36,5 +39,16 @@ class HeadsOrTails {
         } else {
             return "Tails";
         }
+    }
+
+    private String Greeding() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Who are you?");
+        String userName = sc.next();
+        System.out.println("Hello, " + userName + "!");
+
+        sc.close();
+        return userName;
     }
 }
